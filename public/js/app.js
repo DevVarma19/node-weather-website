@@ -1,5 +1,3 @@
-console.log('Client side javaScript file is loaded')
-
 //FetchAPI is a browser based API and is not part of JS
 //Not accessible in nodeJS.
 
