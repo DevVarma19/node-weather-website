@@ -8,6 +8,9 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 
+//when we deploy on heroku it provides a port.
+const port = process.env.PORT || 3000 // used a logical OR in case if we use this locally.
+
 ///Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
     // express looks for views folder bydefault. To change it we need to specify the path to it.
@@ -108,6 +111,6 @@ app.get('*', (req, res) => {
 })
 
 // starts the server // takes port and callback fn as a param
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
