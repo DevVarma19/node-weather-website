@@ -94,7 +94,7 @@ app.get('/products', (req, res) => {
 //This is used for matching specific patterns. -> Used here to match for the extensions of help page. So that we can display our message in a more specific way.
 app.get('/help/*', (req, res) => {
     res.render('404error', {
-        title: '404 Help',
+        title: '404',
         name: 'Varma',
         errorMessage: 'Help article not found'
     })
